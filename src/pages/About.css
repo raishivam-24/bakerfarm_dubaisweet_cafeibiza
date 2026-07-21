@@ -1,0 +1,317 @@
+.pc-about .pc-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 64px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+}
+
+@media (min-width: 768px) {
+  .pc-about .pc-container {
+    padding: 96px 24px;
+    gap: 128px;
+  }
+}
+
+/* Hero */
+.pc-about .pc-hero {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--tertiary);
+}
+
+.pc-about .pc-hero-content {
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 96px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.pc-about .pc-eyebrow {
+  font-size: 12px;
+  color: #ffffff;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.16);
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+}
+
+.pc-about .pc-hero-title {
+  font-family: var(--font-headline);
+  font-size: 2rem;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .pc-about .pc-hero-title {
+    font-size: 3rem;
+  }
+}
+
+.pc-about .pc-hero-desc {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 40rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Philosophy */
+.pc-about .pc-philosophy {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .pc-about .pc-philosophy {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}
+
+.pc-about .pc-philosophy-text {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.pc-about .pc-label-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pc-about .pc-label-line {
+  width: 32px;
+  height: 1px;
+  background-color: var(--primary);
+}
+
+.pc-about .pc-label-text {
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.pc-about .pc-heading {
+  font-family: var(--font-headline);
+  font-size: 2.25rem;
+  color: var(--on-background);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.pc-about .pc-heading-accent {
+  color: var(--primary);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.pc-about .pc-prose p {
+  color: var(--on-surface-variant);
+  line-height: 1.75;
+  margin: 0 0 18px;
+}
+
+.pc-about .pc-quote {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border-left: 2px solid var(--primary);
+  padding: 8px 0 8px 20px;
+}
+
+.pc-about .pc-quote .material-symbols-outlined {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.pc-about .pc-quote p {
+  font-family: var(--font-headline);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--on-surface-variant);
+  margin: 0;
+}
+
+.pc-about .pc-philosophy-image {
+  position: relative;
+}
+
+.pc-about .pc-image-frame {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.pc-about .pc-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pc-about .pc-image-accent {
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 220px;
+  height: 220px;
+  background-color: var(--primary-container);
+  border-radius: 50%;
+  opacity: 0.45;
+  filter: blur(60px);
+  z-index: -1;
+}
+
+/* Shared heading for hours/outlets sections */
+.pc-about .pc-section-heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 56px;
+}
+
+.pc-about .pc-heading-plain {
+  font-family: var(--font-headline);
+  font-size: 2rem;
+  color: var(--on-background);
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Hours */
+.pc-about .pc-hours-table {
+  max-width: 34rem;
+  margin: 0 auto;
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--surface-container-lowest);
+}
+
+.pc-about .pc-hours-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 28px;
+  border-bottom: 1px solid var(--outline-variant);
+  font-size: 15px;
+}
+
+.pc-about .pc-hours-row:last-child {
+  border-bottom: none;
+}
+
+.pc-about .pc-hours-day {
+  font-weight: 700;
+  color: var(--on-background);
+}
+
+.pc-about .pc-hours-time {
+  color: var(--on-surface-variant);
+}
+
+/* Outlets */
+.pc-about .pc-outlets-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .pc-about .pc-outlets-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .pc-about .pc-outlets-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.pc-about .pc-outlet-card {
+  background-color: var(--surface-container-lowest);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid var(--outline-variant);
+  transition: box-shadow 300ms ease, border-color 300ms ease;
+}
+
+.pc-about .pc-outlet-card:hover {
+  box-shadow: var(--shadow-soft);
+  border-color: var(--primary);
+}
+
+.pc-about .pc-outlet-icon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--surface-container);
+  color: var(--primary);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pc-about .pc-outlet-card h3 {
+  font-family: var(--font-headline);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--on-background);
+  margin: 0 0 8px;
+}
+
+.pc-about .pc-outlet-card p {
+  font-size: 14px;
+  color: var(--on-surface-variant);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.pc-about .pc-outlet-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid var(--outline-variant);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pc-about .pc-outlet-phone {
+  font-size: 14px;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.pc-about .pc-outlet-phone:hover {
+  text-decoration: underline;
+}
+
+.pc-about .pc-outlet-phone .material-symbols-outlined {
+  font-size: 18px;
+}

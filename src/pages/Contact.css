@@ -1,0 +1,318 @@
+.pc-contact .pc-main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 64px 24px 96px;
+}
+
+@media (min-width: 768px) {
+  .pc-contact .pc-main {
+    padding: 96px 24px 128px;
+  }
+}
+
+/* Hero */
+.pc-contact .pc-hero {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.pc-contact .pc-hero h1 {
+  font-family: var(--font-headline);
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin: 0 0 28px;
+}
+
+@media (min-width: 768px) {
+  .pc-contact .pc-hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
+.pc-contact .pc-hero p {
+  font-size: 1.05rem;
+  color: var(--tertiary);
+  max-width: 40rem;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.pc-contact .pc-hero-rule {
+  height: 1px;
+  width: 64px;
+  background-color: rgba(194, 101, 42, 0.3);
+  margin: 0 auto;
+}
+
+/* Locations */
+.pc-contact .pc-locations {
+  margin-bottom: 96px;
+}
+
+.pc-contact .pc-locations-heading {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.pc-contact .pc-locations-heading h2 {
+  font-family: var(--font-headline);
+  font-weight: 600;
+  font-size: 1.75rem;
+  color: var(--primary);
+  margin: 0 0 12px;
+}
+
+.pc-contact .pc-locations-heading p {
+  color: var(--tertiary);
+  margin: 0;
+}
+
+.pc-contact .pc-locations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .pc-contact .pc-locations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .pc-contact .pc-locations-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.pc-contact .pc-location-card {
+  background-color: var(--surface-container-lowest);
+  padding: 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--outline-variant);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: border-color 300ms ease, box-shadow 300ms ease;
+}
+
+.pc-contact .pc-location-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-soft);
+}
+
+.pc-contact .pc-location-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.pc-contact .pc-location-card h3 {
+  font-family: var(--font-headline);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--primary);
+  margin: 0 0 10px;
+}
+
+.pc-contact .pc-location-card p {
+  color: var(--tertiary);
+  margin: 0 0 20px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.pc-contact .pc-location-rule {
+  width: 40px;
+  height: 1px;
+  background-color: rgba(194, 101, 42, 0.2);
+  margin-bottom: 20px;
+}
+
+.pc-contact .pc-location-phones {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.pc-contact .pc-location-phone {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.pc-contact .pc-location-phone:hover {
+  text-decoration: underline;
+}
+
+.pc-contact .pc-location-map {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--tertiary);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--tertiary);
+  padding-bottom: 2px;
+}
+
+/* Split: form + hours */
+.pc-contact .pc-split {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .pc-contact .pc-split {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.pc-contact .pc-form-panel,
+.pc-contact .pc-hours-panel {
+  background-color: var(--surface-container-lowest);
+  padding: 40px;
+  border-radius: var(--radius);
+  border: 1px solid var(--outline-variant);
+}
+
+@media (min-width: 768px) {
+  .pc-contact .pc-form-panel,
+  .pc-contact .pc-hours-panel {
+    padding: 48px;
+  }
+}
+
+.pc-contact .pc-form-panel h3,
+.pc-contact .pc-hours-panel h3 {
+  font-family: var(--font-headline);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin: 0 0 28px;
+}
+
+.pc-contact .pc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.pc-contact .pc-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--tertiary);
+  margin-bottom: 10px;
+}
+
+.pc-contact .pc-field input,
+.pc-contact .pc-field textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--outline-variant);
+  color: var(--on-surface);
+  padding: 10px 0;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 200ms ease;
+  outline: none;
+}
+
+.pc-contact .pc-field input::placeholder,
+.pc-contact .pc-field textarea::placeholder {
+  color: var(--outline);
+}
+
+.pc-contact .pc-field input:focus,
+.pc-contact .pc-field textarea:focus {
+  border-color: var(--primary);
+}
+
+.pc-contact .pc-field textarea {
+  resize: none;
+}
+
+.pc-contact .pc-submit {
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--on-primary);
+  padding: 14px 24px;
+  border-radius: var(--radius);
+  border: none;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.pc-contact .pc-submit:hover {
+  background-color: #a8541f;
+}
+
+.pc-contact .pc-form-success {
+  margin: 0;
+  font-size: 13px;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Hours panel */
+.pc-contact .pc-hours-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 32px;
+}
+
+.pc-contact .pc-hours-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--outline-variant);
+  font-size: 14px;
+  color: var(--on-surface);
+}
+
+.pc-contact .pc-hours-row:last-child {
+  border-bottom: none;
+}
+
+.pc-contact .pc-visual-caption {
+  background-color: var(--surface-container-low);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-align: center;
+}
+
+.pc-contact .pc-visual-caption p:first-child {
+  font-family: var(--font-headline);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin: 0 0 10px;
+}
+
+.pc-contact .pc-visual-caption p:nth-child(2) {
+  font-size: 13px;
+  color: var(--tertiary);
+  margin: 0 0 12px;
+}
+
+.pc-contact .pc-visual-caption a {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.pc-contact .pc-visual-caption a:hover {
+  text-decoration: underline;
+}

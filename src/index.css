@@ -1,0 +1,110 @@
+:root {
+  /* Core brand palette (unified from the Menu/Contact source designs,
+     which used matching tokens — treated as the canonical brand theme) */
+  --primary: #c2652a;
+  --on-primary: #ffffff;
+  --primary-container: #f3d9c2;
+  --on-primary-container: #4a260c;
+
+  --secondary: #685e31;
+  --on-secondary: #ffffff;
+  --secondary-container: #f1e3a9;
+  --on-secondary-container: #4f471b;
+
+  --tertiary: #755845;
+  --on-tertiary: #ffffff;
+  --tertiary-container: #d5b099;
+  --on-tertiary-container: #5d4231;
+
+  --background: #faf9f6;
+  --on-background: #1a1c1a;
+  --surface: #faf9f6;
+  --on-surface: #1a1c1a;
+  --surface-bright: #faf9f6;
+  --surface-dim: #dbdad7;
+
+  --surface-container-lowest: #ffffff;
+  --surface-container-low: #f4f3f1;
+  --surface-container: #efeeeb;
+  --surface-container-high: #e9e8e5;
+  --surface-container-highest: #e3e2e0;
+
+  --surface-variant: #e3e2e0;
+  --on-surface-variant: #42493c;
+  --outline: #73796b;
+  --outline-variant: #c2c9b8;
+
+  --error: #ba1a1a;
+  --on-error: #ffffff;
+  --error-container: #ffdad6;
+  --on-error-container: #93000a;
+
+  --font-headline: "Playfair Display", serif;
+  --font-body: "Manrope", sans-serif;
+
+  --shadow-soft: 0px 10px 30px rgba(117, 88, 69, 0.08);
+  --radius: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-full: 9999px;
+
+  --max-width: 1280px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--on-background);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 24;
+  line-height: 1;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.pc-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pc-app main {
+  flex: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,434 @@
+/* ---------- Hero banner ---------- */
+.pc-menu-hero {
+  position: relative;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .pc-menu-hero {
+    min-height: 420px;
+  }
+}
+
+.pc-menu-hero img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pc-menu-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(20, 16, 12, 0.75) 0%,
+    rgba(20, 16, 12, 0.55) 50%,
+    rgba(20, 16, 12, 0.85) 100%
+  );
+}
+
+.pc-menu-hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+}
+
+.pc-menu-hero-content h1 {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 2.75rem;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+@media (min-width: 768px) {
+  .pc-menu-hero-content h1 {
+    font-size: 4rem;
+  }
+}
+
+.pc-menu-hero-content h1 span {
+  color: var(--primary);
+}
+
+.pc-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pc-breadcrumb a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
+
+.pc-breadcrumb a:hover {
+  color: var(--primary);
+}
+
+.pc-breadcrumb span:not(.material-symbols-outlined) {
+  color: var(--primary);
+}
+
+.pc-breadcrumb .material-symbols-outlined {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ---------- Main content ---------- */
+.pc-menu-main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .pc-menu-main {
+    padding: 72px 24px 128px;
+  }
+}
+
+/* ---------- Toolbar ---------- */
+.pc-menu-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.pc-menu-toolbar p {
+  margin: 0;
+  color: var(--on-surface-variant);
+  font-size: 14px;
+}
+
+.pc-download-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary);
+  color: var(--on-primary);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 200ms ease, transform 200ms ease;
+}
+
+.pc-download-all:hover {
+  background-color: #a8541f;
+  transform: translateY(-2px);
+}
+
+.pc-download-all .material-symbols-outlined {
+  font-size: 20px;
+}
+
+/* ---------- Photo carousel ---------- */
+.pc-menu-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pc-menu-carousel-arrow {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--outline-variant);
+  background-color: var(--surface-container-lowest);
+  color: var(--on-background);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 200ms ease, color 200ms ease;
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .pc-menu-carousel-arrow {
+    display: flex;
+  }
+}
+
+.pc-menu-carousel-arrow:hover {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  border-color: var(--primary);
+}
+
+.pc-menu-photo-grid {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 4px 4px 12px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.pc-menu-photo-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.pc-menu-photo-card {
+  flex: 0 0 auto;
+  width: 260px;
+  scroll-snap-align: start;
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--outline-variant);
+  background-color: var(--surface-container-lowest);
+  box-shadow: var(--shadow-soft);
+}
+
+@media (min-width: 640px) {
+  .pc-menu-photo-card {
+    width: 320px;
+  }
+}
+
+.pc-menu-photo-btn {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: var(--surface-container-low);
+  cursor: pointer;
+  aspect-ratio: 1 / 1;
+}
+
+.pc-menu-photo-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pc-menu-photo-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: rgba(20, 16, 12, 0.55);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.pc-menu-photo-overlay .material-symbols-outlined {
+  font-size: 28px;
+}
+
+.pc-menu-photo-btn:hover .pc-menu-photo-overlay,
+.pc-menu-photo-btn:focus-visible .pc-menu-photo-overlay {
+  opacity: 1;
+}
+
+.pc-menu-photo-card figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--on-surface-variant);
+}
+
+.pc-menu-photo-card figcaption a {
+  display: flex;
+  align-items: center;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.pc-menu-photo-card figcaption a:hover {
+  color: #a8541f;
+}
+
+.pc-menu-photo-card figcaption .material-symbols-outlined {
+  font-size: 20px;
+}
+
+/* ---------- Note ---------- */
+.pc-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: var(--surface-container-low);
+  border: 1px solid var(--outline-variant);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.pc-note .material-symbols-outlined {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.pc-note p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--on-surface-variant);
+  line-height: 1.6;
+}
+
+.pc-note a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pc-note a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Lightbox ---------- */
+.pc-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: rgba(10, 8, 6, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.pc-lightbox-image {
+  max-width: min(90vw, 700px);
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+}
+
+.pc-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.pc-lightbox-close:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.pc-lightbox-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 200ms ease;
+}
+
+.pc-lightbox-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.pc-lightbox-arrow-left {
+  left: 16px;
+}
+
+.pc-lightbox-arrow-right {
+  right: 16px;
+}
+
+@media (min-width: 768px) {
+  .pc-lightbox-arrow-left {
+    left: 32px;
+  }
+  .pc-lightbox-arrow-right {
+    right: 32px;
+  }
+}
+
+.pc-lightbox-footer {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+}
+
+.pc-lightbox-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--primary);
+  color: var(--on-primary);
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: background-color 200ms ease;
+}
+
+.pc-lightbox-download:hover {
+  background-color: #a8541f;
+}
+
+.pc-lightbox-download .material-symbols-outlined {
+  font-size: 18px;
+}

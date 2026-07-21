@@ -1,0 +1,232 @@
+.pc-footer {
+  background-color: var(--surface-container-low);
+  border-top: 1px solid rgba(194, 201, 184, 0.35);
+  padding: 80px 0 40px;
+  margin-top: 96px;
+}
+
+.pc-footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.pc-footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 56px;
+  margin-bottom: 56px;
+}
+
+@media (min-width: 768px) {
+  .pc-footer-grid {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 32px;
+  }
+}
+
+/* Brand column */
+.pc-footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+@media (min-width: 768px) {
+  .pc-footer-brand {
+    grid-column: span 4;
+  }
+}
+
+.pc-footer-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.pc-footer-logo-row img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.pc-footer-logo {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 1.375rem;
+  color: var(--on-background);
+  letter-spacing: -0.01em;
+  word-break: break-word;
+}
+
+.pc-footer-tagline {
+  color: var(--on-surface-variant);
+  line-height: 1.7;
+  font-size: 14px;
+  max-width: 24rem;
+}
+
+.pc-connect {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.pc-connect h4 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--on-background);
+}
+
+.pc-connect-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.pc-connect-icons a {
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  background-color: var(--surface-container);
+  color: var(--on-surface-variant);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(194, 201, 184, 0.35);
+  text-decoration: none;
+  transition: color 200ms ease, background-color 200ms ease;
+}
+
+.pc-connect-icons a:hover {
+  color: var(--primary);
+  background-color: rgba(194, 101, 42, 0.08);
+}
+
+.pc-instagram-handle {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.pc-instagram-handle:hover {
+  text-decoration: underline;
+}
+
+/* Outlets column */
+.pc-footer-outlets {
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .pc-footer-outlets {
+    grid-column: span 8;
+  }
+}
+
+.pc-footer-outlets h4 {
+  font-family: var(--font-headline);
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--on-background);
+  margin: 0 0 28px;
+  border-bottom: 1px solid rgba(194, 201, 184, 0.35);
+  padding-bottom: 16px;
+}
+
+.pc-outlets-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 32px;
+  row-gap: 36px;
+}
+
+@media (min-width: 560px) {
+  .pc-outlets-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.pc-outlet-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pc-outlet-item h5 {
+  margin: 0;
+  font-weight: 700;
+  color: var(--on-background);
+  font-size: 14px;
+}
+
+.pc-outlet-item p {
+  margin: 0;
+  color: var(--on-surface-variant);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.pc-outlet-phones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+
+.pc-outlet-item a {
+  color: var(--primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  transition: color 200ms ease;
+}
+
+.pc-outlet-item a:hover {
+  color: var(--on-background);
+}
+
+.pc-outlet-item a .material-symbols-outlined {
+  font-size: 16px;
+}
+
+/* Copyright bar */
+.pc-footer-bottom {
+  padding-top: 28px;
+  border-top: 1px solid rgba(194, 201, 184, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 13px;
+  color: var(--on-surface-variant);
+}
+
+@media (min-width: 768px) {
+  .pc-footer-bottom {
+    flex-direction: row;
+  }
+}
+
+.pc-footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.pc-footer-links a {
+  color: var(--on-surface-variant);
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.pc-footer-links a:hover {
+  color: var(--primary);
+}
